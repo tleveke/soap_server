@@ -61,7 +61,7 @@ public class BookEndpoint {
         
         List<Book> books = bookRepository.findAll();
         for (Book book : books) {
-            response.getBook().add(entitytoweb(book));
+            response.getBooks().add(entitytoweb(book));
         }  
         return response;
     }

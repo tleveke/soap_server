@@ -35,8 +35,8 @@ public class Book {
     @Column(name = "isbn")
     private int isbn;
 
-    @Column(name = "date_publication")
-    private Date date_publication;
+    @Column(name = "datepublication")
+    private int datepublication;
 
     /// TODO la relation Foreign Key (ManyToOne ? ManyToMany ? OneToMany ?)
     
@@ -68,12 +68,12 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public Date getDate_publication() {
-        return date_publication;
+    public int getDatepublication() {
+        return datepublication;
     }
 
-    public void setDate_publication(Date date_publication) {
-        this.date_publication = date_publication;
+    public void setDatepublication(int date_publication) {
+        this.datepublication = date_publication;
     }
 
     public Author getAuthor() {

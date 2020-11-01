@@ -8,11 +8,11 @@
 		<xs:sequence>
 			<!-- Ici ses attributs -->
             <xs:element name="id" type="xs:int" />
-            <xs:element name="first_name" type="xs:string" />
-            <xs:element name="last_name" type="xs:string" />
+            <xs:element name="firstname" type="xs:string" />
+            <xs:element name="lastname" type="xs:string" />
 		</xs:sequence>
 	</xs:complexType>
-
+	
 	<!-- Récupérer un auteur -->
 	<xs:element name="getAuthorRequest">
 		<xs:complexType>
@@ -49,7 +49,7 @@
 	<xs:element name="getAuthorsResponse">
 		<xs:complexType>
 			<xs:sequence>            
-				<xs:element name="authors" type="tns:author" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element name="authors" type="tns:author" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -97,7 +97,6 @@
 	</xs:element>
 
 	<!-- Etc. pour les autres méthodes. -->
-	
 	
 
 </xs:schema>

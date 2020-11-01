@@ -52,7 +52,7 @@ public class AuthorEndpoint {
         List<Author> authors = authorRepository.findAll();
         
         for (Author aut : authors) {
-            System.out.println(aut.getFirst_name().toString());
+            System.out.println(aut.getFirstname().toString());
             response.getAuthors().add(entitytoweb(aut));
         }
         return response;

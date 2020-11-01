@@ -8,7 +8,7 @@ targetNamespace="http://nantes.ynov.com/soap/book" elementFormDefault="qualified
             <xs:element name="id_auteur" type="xs:int" />
             <xs:element name="isbn" type="xs:int" />
             <xs:element name="title" type="xs:string" />
-            <xs:element name="date_publication" type="xs:date" />
+            <xs:element name="date_publication" type="xs:int" />
         </xs:sequence>
     </xs:complexType>
 
@@ -30,7 +30,7 @@ targetNamespace="http://nantes.ynov.com/soap/book" elementFormDefault="qualified
     </xs:element>
 
     <!-- Récupérer l'ensemble des livres -->
-    <xs:element name="GetBooksRequest">
+    <xs:element name="getBooksRequest">
         <xs:complexType>
             <xs:sequence>
             </xs:sequence>
@@ -38,16 +38,16 @@ targetNamespace="http://nantes.ynov.com/soap/book" elementFormDefault="qualified
     </xs:element>
 
     <!-- Request / Response -->
-    <xs:element name="GetBooksResponse">
+    <xs:element name="getBooksResponse">
         <xs:complexType>
             <xs:sequence>
-            	<xs:element name="book" type="tns:book" minOccurs="0" maxOccurs="unbounded" />
+            	<xs:element name="books" type="tns:book" minOccurs="0" maxOccurs="unbounded" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
     <!-- Ajouter un livre -->
-    <xs:element name="AddBookRequest">
+    <xs:element name="addBookRequest">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="book" type="tns:book" />
@@ -57,7 +57,7 @@ targetNamespace="http://nantes.ynov.com/soap/book" elementFormDefault="qualified
 
 
     <!-- Request / Response -->
-    <xs:element name="DeleteBookRequest">
+    <xs:element name="deleteBookRequest">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="book" type="tns:book" />
